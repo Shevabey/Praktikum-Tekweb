@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah Nama dan Usia</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            background-color: #3081D0;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #hasil {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#form-kirim").submit(function (event) {
+                event.preventDefault(); // Mencegah pengiriman formulir dan pindah halaman
+
+                var nama = $("#input-nama").val();
+                var usia = $("#input-usia").val();
+
+                $("#hasil").html("Nama: " + nama + "<br>Usia: " + usia);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <form id="form-kirim">
+        <label for="input-nama">Nama:</label>
+        <input type="text" id="input-nama" required>
+
+        <label for="input-usia">Umur:</label>
+        <input type="number" id="input-usia" required>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <div id="hasil"></div>
+
+</body>
+</html>

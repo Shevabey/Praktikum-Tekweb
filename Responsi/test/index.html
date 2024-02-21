@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Biodata Mahasiswa</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="proses.php" method="post">
+    <h2>Formulir Biodata Mahasiswa</h2>
+
+    <!-- NIM -->
+    <label for="nim">NIM:</label>
+    <input type="text" id="nim" name="nim" required>
+
+    <!-- Nama -->
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <!-- Alamat -->
+    <label for="alamat">Alamat:</label>
+    <textarea id="alamat" name="alamat" rows="4" required></textarea>
+
+    <!-- Program Studi -->
+    <label for="prodi">Program Studi:</label>
+    <select id="prodi" name="prodi" required>
+      <option value="informatika">Informatika</option>
+      <option value="sistem-informasi">Sistem Informasi</option>
+      <option value="teknik-elektro">Teknik Elektro</option>
+      <!-- Tambahkan opsi program studi lainnya sesuai kebutuhan -->
+    </select>
+
+    <!-- Tombol Submit -->
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

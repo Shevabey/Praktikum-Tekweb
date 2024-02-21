@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>latihan 2</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      var greeting;
+      let hour = new Date().getHours();
+      if (hour >= 4 && hour < 12) {
+        greeting = "Selamat pagi";
+      } else if (hour >= 12 && hour < 16) {
+        greeting = "Selamat siang";
+      } else if (hour >= 16 && hour < 18) {
+        greeting = "Selamat sore";
+      } else {
+        greeting = "Selamat malam";
+      }
+
+      document.getElementById("demo").innerHTML = greeting;
+    </script>
+  </body>
+</html>

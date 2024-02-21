@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Nilai</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #hasil {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#form-cek").submit(function (event) {
+                event.preventDefault(); // Mencegah pengiriman formulir dan pindah halaman
+
+                var nim = $("#input-nim").val();
+                var nilai = parseFloat($("#input-nilai").val());
+
+                var pesan = "Maaf Anda Tidak Lulus";
+                if (nilai > 65) {
+                    pesan = "Selamat anda Lulus! 👍";
+                }
+
+                // Menampilkan pesan menggunakan alert
+                alert("NIM: " + nim + "\nNilai: " + nilai + "\nStatus: " + pesan);
+
+                // Menambahkan informasi ke dalam elemen HTML
+                $("#hasil").html("NIM: " + nim + "<br>Nilai: " + nilai + "<br>Status: " + pesan);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <form id="form-cek">
+        <label for="input-nim">NIM:</label>
+        <input type="number" id="input-nim" required>
+
+        <label for="input-nilai">Nilai:</label>
+        <input type="number" id="input-nilai" required>
+
+        <button type="submit">Cek</button>
+    </form>
+
+    <div id="hasil"></div>
+
+</body>
+</html>

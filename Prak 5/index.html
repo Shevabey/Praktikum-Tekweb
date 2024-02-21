@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prak 5</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <label for="inputSuhu">Masukkan Suhu Celsius: </label>
+    <label for="rumus">Rumus : Fahrenheit = (9/5* Celcius) + 32 </label>
+    <input type="number" id="inputSuhu">
+    <p id="demo">Display the result here.</p>
+    <button onclick="onButtonClick()">Konfersi suhu</button>
+   
+    <script>
+      // Menampilkan alert ketika halaman selesai dimuat
+      window.onload = function () {
+        alert("Halaman selesai di load, selamat mencoba");
+      };
+
+      // Konversi suhu dari Celcius ke Fahrenheit
+      function toFahrenheit(suhuDalamCelcius) {
+        // Rumus konversi
+        let fahrenheit = (9 / 5) * suhuDalamCelcius + 32;
+
+        // Menampilkan hasil konversi 
+        document.getElementById("demo").innerHTML =
+          `Hasil konversi: ${fahrenheit} Fahrenheit`;
+      }
+
+      // Fungsi yang akan dipanggil saat tombol diklik
+      function onButtonClick() {
+        // Contoh penggunaan fungsi toFahrenheit
+        var suhuCelcius = parseFloat(document.getElementById ('inputSuhu').value);
+        toFahrenheit(suhuCelcius);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/Form/style.css" />
+    <script>
+      function validateForm() {
+        // Mengambil nilai dari input username dan password
+        let username = document.getElementById("uname").value;
+        let password = document.getElementById("psw").value;
+
+        // Memeriksa apakah username atau password kosong
+        if (username === "" || password === "") {
+          alert("Username dan password tidak boleh kosong");
+          return false; // Mencegah formulir dikirimkan
+        }
+
+        // Jika formulirnya valid, arahkan ke home.html
+        window.location.href = "home.html";
+        return false; // Cegah pengiriman formulir default
+      }
+
+      function resetForm() {
+        // Mereset nilai input dalam formulir
+        document.getElementById("loginForm").reset();
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Form Login</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+      <div class="imgcontainer">
+        <img src="./pp.png" alt="Avatar" class="avatar" />
+      </div>
+      <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="uname" />
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" />
+        <button type="submit">Login</button>
+        <input type="checkbox" checked="checked" /> Remember me
+      </div>
+      <div class="container" style="background-color: #f1f1f1">
+        <!-- Tombol "Cancel" yang akan mereset formulir -->
+        <button type="button" class="cancelbtn" onclick="resetForm()">Cancle</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </body>
+</html>

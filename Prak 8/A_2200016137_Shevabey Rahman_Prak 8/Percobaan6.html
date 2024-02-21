@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percobaan 6</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#w3s").attr({
+                    "href": "https://www.w3schools.com/jquery/default.asp",
+                    "title": "W3School JQuery Tutorial"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <p><a href="https://www.w3schools.com/" title="some title" id="w3s">W3School.com</a></p>
+    <p>Mouse over the link to see that the attribute has changed, and a title attribute is set.</p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Menangani double-click pada div1
+        $("#div1").dblclick(function () {
+          $(this).css("background-color", "red");
+        });
+
+        // Menangani double-click pada div2
+        $("#div2").dblclick(function () {
+          $(this).css("background-color", "red");
+        });
+
+        // Menangani double-click pada div3
+        $("#div3").dblclick(function () {
+          $(this).css("background-color", "red");
+        });
+      });
+    </script>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center; ;
+        }
+        
+      .color {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h2{
+        text-align: center;
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+      <h2>double click for change color to red</h2>
+    <div class="color">
+      <div
+        id="div1"
+        style="width: 80px; height: 80px; background-color: yellow"
+      ></div>
+      <br />
+      <div
+        id="div2"
+        style="width: 80px; height: 80px; background-color: green"
+      ></div>
+      <br />
+      <div
+        id="div3"
+        style="width: 80px; height: 80px; background-color: blue"
+      ></div>
+    </div>
+  </body>
+</html>

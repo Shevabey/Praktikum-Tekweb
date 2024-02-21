@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata Mahasiswa</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        background-color: #f4f4f4;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        font-family: "Arial", sans-serif;
+      }
+
+      form {
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+
+      .biodata {
+        padding: 0;
+        height: 80px;
+        width: 600px;
+        position: relative;
+        padding: 0;
+        margin: none;
+        top: -20px;
+        color: #f1f1f1;
+        background-color: #3081d0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .biodata h2 {
+        justify-content: center;
+        margin: 0;
+        text-transform: capitalize;
+        align-items: center;
+        position: relative;
+        padding: 20px 20px;
+      }
+
+      label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+
+      input,
+      select,
+      textarea {
+        box-sizing: border-box;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 100%;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      btn {
+        display: flex;
+      }
+
+      .submitbtn {
+        width: auto;
+        color: white;
+        background-color: #3081d0;
+        padding: 10px 18px;
+        border: none;
+      }
+      .cancelbtn {
+        border: none;
+        color: white;
+        width: auto;
+        background-color: #ff0000;
+        padding: 10px 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="biodata">
+        <h2>Biodata Mahasiswa</h2>
+      </div>
+      <label for="nim">NIM:</label>
+      <input type="text" id="nim" name="nim" required />
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+      <label for="alamat">Alamat:</label>
+      <input type="text" id="alamat" name="alamat" required />
+      <label for="prodi">Program Studi:</label>
+      <select id="prodi" name="prodi" required>
+        <option value="Pilih Prodi" selected>Pilih Prodi</option>
+        <option value="informatika">Informatika</option>
+        <option value="sistem-informasi">Sistem Informasi</option>
+        <option value="teknik-elektro">Teknik Elektro</option>
+      </select>
+      <div class="btn">
+        <button type="button" class="submitbtn">Submit</button>
+        <button type="button" class="cancelbtn">Cancle</button>
+      </div>
+    </form>
+  </body>
+</html>

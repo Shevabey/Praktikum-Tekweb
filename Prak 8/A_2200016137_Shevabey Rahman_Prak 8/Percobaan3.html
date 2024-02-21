@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percobaan 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          alert("Text: " + $("#test").text());
+        });
+
+        $("#btn2").click(function () {
+          alert("HTML: " + $("#test").html());
+        });
+        
+        $("#btn3").click(function () {
+          alert("Value: " + $("#tesval").val());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="test">This is some <b>bold</b> text in a paragraph</p>
+    <p>Name : <input type="text" id="tesval" value="Mickey Mouse"></p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <button id="btn3">Show Value</button>
+  </body>
+</html>

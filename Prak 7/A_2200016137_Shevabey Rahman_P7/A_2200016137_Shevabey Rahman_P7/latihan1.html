@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show/Hide Image with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+  </head>
+  <body>
+    <div class="container">
+      <!-- Gambar yang akan disembunyikan/ditampilkan -->
+      <img id="myImage" src="logo.png" alt="Logo UAD" />
+
+      <!-- Tombol Hide/Show -->
+      <button id="toggleBtn">Toggle Image</button>
+    </div>
+
+    <script>
+      // Gunakan jQuery untuk menangani klik tombol Toggle
+      $("#toggleBtn").click(function () {
+        $("#myImage").toggle();
+      });
+    </script>
+  </body>
+</html>

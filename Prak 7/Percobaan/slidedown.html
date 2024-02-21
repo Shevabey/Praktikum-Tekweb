@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown("slow");
+            });
+
+            $("#back").click(function(){
+                $("#panel").slideUp("slow");
+            });
+        });
+    </script>
+    
+    <style> 
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #back{
+            float: left;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background: crimson;
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+
+        div {
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+    <div id="back">Back</div>
+
+</body>
+</html>
